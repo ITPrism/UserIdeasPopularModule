@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.6" client="site" method="upgrade">
+	<name>MOD_USERIDEASPOPULAR</name>
+	<author>Todor Iliev</author>
+	<copyright>Copyright (C) 2016 Todor Iliev ( ITPrism.com )</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.en.html GNU/GPLv3</license>
+	<authorEmail>todor@itprism.com</authorEmail>
+	<authorUrl>http://itprism.com</authorUrl>
+	<version>2.4</version>
+	<creationDate>17 November, 2016</creationDate>
+	<description><![CDATA[
+    <p>UserIdeas Popular is a module that displays a list of most popular ideas.</p>
+    <p><a href="http://itprism.com/" target="_blank">Subscribe for the newsletter</a> to receive <strong>gifts</strong>, <strong>discount codes</strong>, information about <strong>updates</strong> and information about <strong>new ITPrism extensions</strong>.</p>
+    <p>Please, <a href="http://extensions.joomla.org/extensions/contacts-and-feedback/testimonials-a-suggestions/24422" target="_blank">vote for the extension</a> on Joomla! Extensions Directory</p>
+    ]]></description>
+	
+    <help url="MOD_USERIDEASPOPULAR_HELP_URL"/>
+
+	<files>
+	    <filename module="mod_userideaspopular">mod_userideaspopular.php</filename>
+        <folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                <field name="items_limit" type="text" label="MOD_USERIDEASPOPULAR_RESULTS_LIMIT" description="MOD_USERIDEASPOPULAR_RESULTS_LIMIT_DESC" default="5" />
+                <field name="title_length" type="text" label="MOD_USERIDEASPOPULAR_TITLE_LENGTH" description="MOD_USERIDEASPOPULAR_TITLE_LENGTH_DESC"/>
+                <field name="intro_length" type="text" label="MOD_USERIDEASPOPULAR_DESCRIPTION_LENGTH" description="MOD_USERIDEASPOPULAR_DESCRIPTION_LENGTH_DESC"/>
+                <field name="show_intro" type="list" class="chzn-color" label="MOD_USERIDEASPOPULAR_DISPLAY_DESCRIPTION" description="MOD_USERIDEASPOPULAR_DISPLAY_DESCRIPTION_DESC" default="">
+                    <option value="">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="show_create_date" type="list" class="chzn-color" label="MOD_USERIDEASPOPULAR_DISPLAY_DATE" description="MOD_USERIDEASPOPULAR_DISPLAY_DATE_DESC" default="">
+                    <option value="">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="show_author" type="list" class="chzn-color"
+                       label="MOD_USERIDEASPOPULAR_DISPLAY_PUBLISHER"
+                       description="MOD_USERIDEASPOPULAR_DISPLAY_PUBLISHER_DESC"
+                       default="">
+                    <option value="">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="show_votes" type="list" class="chzn-color"
+                       label="MOD_USERIDEASPOPULAR_DISPLAY_VOTES"
+                       description="MOD_USERIDEASPOPULAR_DISPLAY_VOTES_DESC"
+                       default="">
+                    <option value="">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="show_hits" type="list" class="chzn-color"
+                       label="MOD_USERIDEASPOPULAR_DISPLAY_HITS"
+                       description="MOD_USERIDEASPOPULAR_DISPLAY_HITS_DESC"
+                       default="">
+                    <option value="">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+			</fieldset>
+			
+			<fieldset name="advanced">
+                <field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+                <field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                <field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+                <field name="cachemode" type="hidden" default="static">
+                    <option value="static"></option>
+                </field>
+            </fieldset>
+		</fields>
+	</config>
+
+    <updateservers>
+        <server type="extension" priority="1" name="Module - UserIdeas Popular">http://cdn.itprism.com/updates/userideas/mod_userideaspopular.xml</server>
+    </updateservers>
+</extension>
